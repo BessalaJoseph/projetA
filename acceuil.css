@@ -1,0 +1,159 @@
+.heade {
+    background: rgb(97, 29, 29);
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+}
+.heade .btn {
+    border-radius: 100px;
+    margin: 17px 30px;
+    width: 150px;
+    font-size: 1.2rem;
+    font-style: italic;
+    background: transparent;
+    color: white;
+    border: 0px solid;
+    transition: border-color .3s;
+}
+.heade .btn:hover {
+    transform: scale(1.09);
+    color: rgb(63, 226, 9);
+}
+.heade .Anim {
+    animation: anim 4s linear infinite;
+}
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    37.5% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62.5% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    87.5% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.btnpub{
+    background: transparent;
+    color: rgb(97, 29, 29);
+    height: 40px;
+    border: 1px solid rgb(97, 29, 29);
+    border-width: 2px;
+    border-color: rgb(97, 29, 29);
+    box-shadow: 2px 3px 8px white,-2px 3px 8px white,-2px -3px 8px white,
+    2px -3px 8px white;
+    position: relative;
+    left: 45%;
+    top: 50px;
+    border-radius: 50px;
+    transition: .3s;
+}
+.btnpub:hover {
+    transform: scale(1.05);
+    background: rgb(97, 29, 29);
+    color: white;
+    box-shadow: 2px 3px 8px rgb(63, 226, 9),-2px 3px 8px rgb(63, 226, 9),-2px -3px 8px rgb(63, 226, 9),
+    2px -3px 8px rgb(63, 226, 9);
+}
+.recherche {
+    position: relative;
+    top: 90px;
+    left: 27%;
+}
+.cherche {
+    width: 100%;
+    max-width: 600px;
+    background: rgb(97, 29, 29);
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 10px 20px;
+}
+.cherche input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: white;
+}
+::placeholder {
+    color: black;
+}
+.cherche button img {
+    width: 25px;
+}
+.cherche button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgb(63, 226, 9);
+    cursor: pointer;
+}
+.btn {
+    position: relative;
+    left: 35%;
+    border-width: none;
+    border-color: transparent;
+}
+/* Style pour le superposé (modal) */
+.modal {
+    display: none; /* Par défaut, le modal est caché */
+    position: fixed; /* Le modal est positionné de manière fixe */
+    z-index: 1; /* Au-dessus des autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%; /* Prend toute la largeur de l'écran */
+    height: 100%; /* Prend toute la hauteur de l'écran */
+    overflow: auto; /* Ajoute des barres de défilement si nécessaire */
+    background-color: rgb(0,0,0); /* Fond noir */
+    background-color: rgba(0,0,0,0.4); /* Fond noir semi-transparent */
+    padding-top: 60px; /* Espace en haut */
+}
+
+/* Style pour le contenu du modal */
+.modal-content {
+    background-color: #fefefe; /* Fond blanc */
+    margin: 5% auto; /* Centré avec une marge de 5% en haut */
+    padding: 20px; /* Padding interne */
+    border: 1px solid #888; /* Bordure grise */
+    width: 80%; /* Prend 80% de la largeur de la fenêtre */
+    max-width: 500px; /* Largeur maximale de 500px */
+    position: relative; /* Position relative pour le positionnement du bouton de fermeture */
+}
+
+/* Style pour le bouton de fermeture */
+.close-btn {
+    color: yellow; /* Couleur gris clair */
+    float: right; /* Aligné à droite */
+    font-size: 28px; /* Taille de police */
+    font-weight: bold; /* En gras */
+}
+
+/* Changement de couleur au survol et au focus du bouton de fermeture */
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Couleur noire */
+    text-decoration: none; /* Pas de soulignement */
+    cursor: pointer; /* Curseur en forme de main */
+}
